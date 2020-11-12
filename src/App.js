@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css';
 import Card from './components/Card';
 
@@ -13,8 +13,6 @@ function App() {
       setResult(data.results)
     })
   }, [])
-
-
   return (
     <div className="App">
       <header className="App-header">

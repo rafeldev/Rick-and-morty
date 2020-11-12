@@ -2,19 +2,25 @@ import React from 'react';
 import {  Hover, Img, DisplayOver, SubTitle, Paragraph, Background } from "./style"
 
 
-export const index = (props) => {
+export const index = ({ chars }) => {
+  const {
+    image,
+    name,
+    species,
+    gender
+  } = chars
   return (
     <div className="App">
           <Background>
-            <Img src={props.chars.image} alt="rick and morty" />
+            <Img src={image} alt="rick and morty" />
             <DisplayOver>
               <Hover>
-                <SubTitle>{props.chars.name}</SubTitle>
+                <SubTitle>{name}</SubTitle>
                 <Paragraph>
-                  {props.chars.species}
+                  Especie: {species}
                 </Paragraph>
                 <Paragraph>
-                  {props.chars.gender}
+                  Genero: {gender}
                 </Paragraph>
               </Hover>
             </DisplayOver>
